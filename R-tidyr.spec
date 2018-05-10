@@ -4,7 +4,7 @@
 #
 Name     : R-tidyr
 Version  : 0.8.0
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/tidyr_0.8.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyr_0.8.0.tar.gz
 Summary  : Easily Tidy Data with 'spread()' and 'gather()' Functions
