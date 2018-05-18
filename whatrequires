@@ -1,1 +1,7 @@
 # This file contains recursive sources that require this package
+R-broom
+R-caret
+R-modelr
+R-plotly
+R-recipes
+R-tidyverse
