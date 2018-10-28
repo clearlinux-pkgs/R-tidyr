@@ -1,7 +1,9 @@
 # This file contains recursive sources that require this package
+R-RNeXML
 R-broom
-R-caret
+R-janitor
 R-modelr
 R-plotly
+R-questionr
 R-recipes
 R-tidyverse
