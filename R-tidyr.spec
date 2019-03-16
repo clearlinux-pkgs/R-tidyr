@@ -4,7 +4,7 @@
 #
 Name     : R-tidyr
 Version  : 0.8.3
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/tidyr_0.8.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyr_0.8.3.tar.gz
 Summary  : An evolution of 'reshape2'. It's designed specifically for data tidying (not general reshaping or aggregating) and works well with 'dplyr' data pipelines.
