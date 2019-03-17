@@ -4,19 +4,20 @@
 #
 Name     : R-tidyr
 Version  : 0.8.3
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/tidyr_0.8.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyr_0.8.3.tar.gz
 Summary  : An evolution of 'reshape2'. It's designed specifically for data tidying (not general reshaping or aggregating) and works well with 'dplyr' data pipelines.
 Group    : Development/Tools
 License  : MIT
 Requires: R-tidyr-lib = %{version}-%{release}
-Requires: R-dplyr
-Requires: R-tibble
-Requires: R-tidyselect
+Requires: R-cli
+Requires: R-utf8
+BuildRequires : R-cli
 BuildRequires : R-dplyr
 BuildRequires : R-tibble
 BuildRequires : R-tidyselect
+BuildRequires : R-utf8
 BuildRequires : buildreq-R
 
 %description
@@ -38,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551539806
+export SOURCE_DATE_EPOCH=1552844694
 
 %install
-export SOURCE_DATE_EPOCH=1551539806
+export SOURCE_DATE_EPOCH=1552844694
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -77,8 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library tidyr|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  tidyr || :
 
 
 %files
@@ -120,10 +120,27 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/tidyr/help/tidyr.rdx
 /usr/lib64/R/library/tidyr/html/00Index.html
 /usr/lib64/R/library/tidyr/html/R.css
-/usr/lib64/R/library/tidyr/libs/symbols.rds
+/usr/lib64/R/library/tidyr/tests/testthat.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-append.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-complete.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-drop-na.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-expand.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-extract.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-fill.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-full_seq.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-gather.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-id.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-nest.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-replace_na.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-separate-rows.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-separate.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-spread.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-uncount.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-underscored.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-unite.R
+/usr/lib64/R/library/tidyr/tests/testthat/test-unnest.R
 
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/tidyr/libs/tidyr.so
 /usr/lib64/R/library/tidyr/libs/tidyr.so.avx2
-/usr/lib64/R/library/tidyr/libs/tidyr.so.avx512
