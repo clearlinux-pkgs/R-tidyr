@@ -4,17 +4,17 @@
 #
 Name     : R-tidyr
 Version  : 0.8.3
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/tidyr_0.8.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyr_0.8.3.tar.gz
 Summary  : An evolution of 'reshape2'. It's designed specifically for data tidying (not general reshaping or aggregating) and works well with 'dplyr' data pipelines.
 Group    : Development/Tools
 License  : MIT
 Requires: R-tidyr-lib = %{version}-%{release}
-Requires: R-cli
-Requires: R-utf8
+Requires: R-purrr
 BuildRequires : R-cli
 BuildRequires : R-dplyr
+BuildRequires : R-purrr
 BuildRequires : R-tibble
 BuildRequires : R-tidyselect
 BuildRequires : R-utf8
@@ -39,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552844694
+export SOURCE_DATE_EPOCH=1552859315
 
 %install
-export SOURCE_DATE_EPOCH=1552844694
+export SOURCE_DATE_EPOCH=1552859315
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
