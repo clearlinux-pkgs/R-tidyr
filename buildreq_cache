@@ -1,6 +1,9 @@
 0.8.3
+R-Rcpp
 R-cli
 R-dplyr
+R-glue
+R-pkgconfig
 R-purrr
 R-tibble
 R-tidyselect

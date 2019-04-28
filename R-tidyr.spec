@@ -4,16 +4,21 @@
 #
 Name     : R-tidyr
 Version  : 0.8.3
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/tidyr_0.8.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyr_0.8.3.tar.gz
 Summary  : An evolution of 'reshape2'. It's designed specifically for data tidying (not general reshaping or aggregating) and works well with 'dplyr' data pipelines.
 Group    : Development/Tools
 License  : MIT
 Requires: R-tidyr-lib = %{version}-%{release}
-Requires: R-purrr
+Requires: R-Rcpp
+Requires: R-glue
+Requires: R-pkgconfig
+BuildRequires : R-Rcpp
 BuildRequires : R-cli
 BuildRequires : R-dplyr
+BuildRequires : R-glue
+BuildRequires : R-pkgconfig
 BuildRequires : R-purrr
 BuildRequires : R-tibble
 BuildRequires : R-tidyselect
@@ -39,10 +44,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552859315
+export SOURCE_DATE_EPOCH=1556477648
 
 %install
-export SOURCE_DATE_EPOCH=1552859315
+export SOURCE_DATE_EPOCH=1556477648
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -78,7 +83,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  tidyr || :
+R CMD check --no-manual --no-examples --no-codoc tidyr || :
 
 
 %files
@@ -143,4 +148,3 @@ R CMD check --no-manual --no-examples --no-codoc  tidyr || :
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/tidyr/libs/tidyr.so
-/usr/lib64/R/library/tidyr/libs/tidyr.so.avx2
