@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 R-RNeXML
-R-SGP
 R-adephylo
 R-broom
 R-flexsurv
@@ -9,7 +8,6 @@ R-janitor
 R-modelr
 R-phylobase
 R-plotly
-R-princurve
 R-questionr
 R-recipes
 R-robCompositions
