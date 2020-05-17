@@ -4,7 +4,7 @@
 #
 Name     : R-tidyr
 Version  : 1.0.3
-Release  : 35
+Release  : 36
 URL      : https://cran.r-project.org/src/contrib/tidyr_1.0.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyr_1.0.3.tar.gz
 Summary  : Tidy Messy Data
@@ -64,10 +64,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1588872768
+export SOURCE_DATE_EPOCH=1589745957
 
 %install
-export SOURCE_DATE_EPOCH=1588872768
+export SOURCE_DATE_EPOCH=1589745957
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -189,3 +189,4 @@ R CMD check --no-manual --no-examples --no-codoc tidyr || :
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/tidyr/libs/tidyr.so
+/usr/lib64/R/library/tidyr/libs/tidyr.so.avx2
