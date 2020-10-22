@@ -4,9 +4,10 @@ R-broom
 R-flexsurv
 R-htmlTable
 R-janitor
+R-labelled
+R-mice
 R-modelr
 R-plotly
-R-questionr
 R-recipes
 R-robCompositions
 R-rsample
