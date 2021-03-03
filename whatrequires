@@ -1,6 +1,8 @@
 # This file contains recursive sources that require this package
+R-GGally
 R-RNeXML
 R-broom
+R-dtplyr
 R-flexsurv
 R-htmlTable
 R-janitor
