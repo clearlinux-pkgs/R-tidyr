@@ -4,7 +4,7 @@
 #
 Name     : R-tidyr
 Version  : 1.1.4
-Release  : 50
+Release  : 51
 URL      : https://cran.r-project.org/src/contrib/tidyr_1.1.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyr_1.1.4.tar.gz
 Summary  : Tidy Messy Data
