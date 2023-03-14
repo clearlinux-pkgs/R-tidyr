@@ -4,7 +4,7 @@
 #
 Name     : R-tidyr
 Version  : 1.3.0
-Release  : 61
+Release  : 62
 URL      : https://cran.r-project.org/src/contrib/tidyr_1.3.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tidyr_1.3.0.tar.gz
 Summary  : Tidy Messy Data
@@ -37,9 +37,6 @@ BuildRequires : R-tibble
 BuildRequires : R-tidyselect
 BuildRequires : R-vctrs
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 variable, each row is an observation, and each cell contains a single
@@ -66,10 +63,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1674667961
+export SOURCE_DATE_EPOCH=1678828497
 
 %install
-export SOURCE_DATE_EPOCH=1674667961
+export SOURCE_DATE_EPOCH=1678828497
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
