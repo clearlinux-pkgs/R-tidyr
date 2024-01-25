@@ -3,11 +3,13 @@ R-DiagrammeR
 R-GGally
 R-RNeXML
 R-broom
+R-broom.helpers
 R-broom.mixed
 R-dbplyr
 R-dtplyr
 R-flexsurv
 R-ggfortify
+R-ggstats
 R-janitor
 R-labelled
 R-mice
